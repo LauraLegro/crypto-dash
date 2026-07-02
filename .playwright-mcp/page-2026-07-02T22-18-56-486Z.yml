@@ -1,0 +1,149 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - link "Home" [ref=e4] [cursor=pointer]:
+      - /url: /
+    - link "About" [ref=e5] [cursor=pointer]:
+      - /url: /about
+  - generic [ref=e6]:
+    - heading "🚀 Crypto Dash" [level=1] [ref=e7]
+    - generic [ref=e11]:
+      - textbox "Filter coins by name or symbol" [ref=e13]
+      - generic [ref=e14]:
+        - generic [ref=e15]: "Show:"
+        - combobox "Show:" [ref=e16]:
+          - option "5"
+          - option "10" [selected]
+          - option "20"
+          - option "50"
+          - option "100"
+      - generic [ref=e17]:
+        - generic [ref=e18]: "Sort By:"
+        - combobox "Sort By:" [ref=e19]:
+          - option "Market Cap (High To Low)" [selected]
+          - option "Market Cap (Low To High)"
+          - option "Price (High To Low)"
+          - option "Price (Low To High)"
+          - option "24h Change (High To Low)"
+          - option "24h Change (Low To High)"
+      - button "★ Favorites (1)" [ref=e133] [cursor=pointer]
+    - main [ref=e22]:
+      - 'link "Remove from favorites Bitcoin Bitcoin BTC Price: $61,465 1.15 % Market Cap: 1,232,449,147,350" [ref=e134] [cursor=pointer]':
+        - /url: /coin/bitcoin
+        - generic [ref=e24]:
+          - button "Remove from favorites" [active] [ref=e135]: ★
+          - generic [ref=e26]:
+            - img "Bitcoin" [ref=e27]
+            - generic [ref=e28]:
+              - heading "Bitcoin" [level=2] [ref=e29]
+              - paragraph [ref=e30]: BTC
+          - paragraph [ref=e31]: "Price: $61,465"
+          - paragraph [ref=e32]: 1.15 %
+          - paragraph [ref=e33]: "Market Cap: 1,232,449,147,350"
+      - 'link "Add to favorites Ethereum Ethereum ETH Price: $1,695.5 4.18 % Market Cap: 204,621,370,010" [ref=e34] [cursor=pointer]':
+        - /url: /coin/ethereum
+        - generic [ref=e35]:
+          - button "Add to favorites" [ref=e36]: ☆
+          - generic [ref=e37]:
+            - img "Ethereum" [ref=e38]
+            - generic [ref=e39]:
+              - heading "Ethereum" [level=2] [ref=e40]
+              - paragraph [ref=e41]: ETH
+          - paragraph [ref=e42]: "Price: $1,695.5"
+          - paragraph [ref=e43]: 4.18 %
+          - paragraph [ref=e44]: "Market Cap: 204,621,370,010"
+      - 'link "Add to favorites Tether Tether USDT Price: $0.999 0.00 % Market Cap: 184,095,722,269" [ref=e45] [cursor=pointer]':
+        - /url: /coin/tether
+        - generic [ref=e46]:
+          - button "Add to favorites" [ref=e47]: ☆
+          - generic [ref=e48]:
+            - img "Tether" [ref=e49]
+            - generic [ref=e50]:
+              - heading "Tether" [level=2] [ref=e51]
+              - paragraph [ref=e52]: USDT
+          - paragraph [ref=e53]: "Price: $0.999"
+          - paragraph [ref=e54]: 0.00 %
+          - paragraph [ref=e55]: "Market Cap: 184,095,722,269"
+      - 'link "Add to favorites BNB BNB BNB Price: $556.28 0.02 % Market Cap: 74,981,737,026" [ref=e56] [cursor=pointer]':
+        - /url: /coin/binancecoin
+        - generic [ref=e57]:
+          - button "Add to favorites" [ref=e58]: ☆
+          - generic [ref=e59]:
+            - img "BNB" [ref=e60]
+            - generic [ref=e61]:
+              - heading "BNB" [level=2] [ref=e62]
+              - paragraph [ref=e63]: BNB
+          - paragraph [ref=e64]: "Price: $556.28"
+          - paragraph [ref=e65]: 0.02 %
+          - paragraph [ref=e66]: "Market Cap: 74,981,737,026"
+      - 'link "Add to favorites USDC USDC USDC Price: $1 0.01 % Market Cap: 73,186,583,743" [ref=e67] [cursor=pointer]':
+        - /url: /coin/usd-coin
+        - generic [ref=e68]:
+          - button "Add to favorites" [ref=e69]: ☆
+          - generic [ref=e70]:
+            - img "USDC" [ref=e71]
+            - generic [ref=e72]:
+              - heading "USDC" [level=2] [ref=e73]
+              - paragraph [ref=e74]: USDC
+          - paragraph [ref=e75]: "Price: $1"
+          - paragraph [ref=e76]: 0.01 %
+          - paragraph [ref=e77]: "Market Cap: 73,186,583,743"
+      - 'link "Add to favorites XRP XRP XRP Price: $1.078 1.11 % Market Cap: 67,116,555,714" [ref=e78] [cursor=pointer]':
+        - /url: /coin/ripple
+        - generic [ref=e79]:
+          - button "Add to favorites" [ref=e80]: ☆
+          - generic [ref=e81]:
+            - img "XRP" [ref=e82]
+            - generic [ref=e83]:
+              - heading "XRP" [level=2] [ref=e84]
+              - paragraph [ref=e85]: XRP
+          - paragraph [ref=e86]: "Price: $1.078"
+          - paragraph [ref=e87]: 1.11 %
+          - paragraph [ref=e88]: "Market Cap: 67,116,555,714"
+      - 'link "Add to favorites Solana Solana SOL Price: $80.42 2.75 % Market Cap: 46,723,030,922" [ref=e89] [cursor=pointer]':
+        - /url: /coin/solana
+        - generic [ref=e90]:
+          - button "Add to favorites" [ref=e91]: ☆
+          - generic [ref=e92]:
+            - img "Solana" [ref=e93]
+            - generic [ref=e94]:
+              - heading "Solana" [level=2] [ref=e95]
+              - paragraph [ref=e96]: SOL
+          - paragraph [ref=e97]: "Price: $80.42"
+          - paragraph [ref=e98]: 2.75 %
+          - paragraph [ref=e99]: "Market Cap: 46,723,030,922"
+      - 'link "Add to favorites TRON TRON TRX Price: $0.317 0.10 % Market Cap: 30,091,989,594" [ref=e100] [cursor=pointer]':
+        - /url: /coin/tron
+        - generic [ref=e101]:
+          - button "Add to favorites" [ref=e102]: ☆
+          - generic [ref=e103]:
+            - img "TRON" [ref=e104]
+            - generic [ref=e105]:
+              - heading "TRON" [level=2] [ref=e106]
+              - paragraph [ref=e107]: TRX
+          - paragraph [ref=e108]: "Price: $0.317"
+          - paragraph [ref=e109]: 0.10 %
+          - paragraph [ref=e110]: "Market Cap: 30,091,989,594"
+      - 'link "Add to favorites Figure Heloc Figure Heloc FIGR_HELOC Price: $1.039 0.00 % Market Cap: 20,256,926,784" [ref=e111] [cursor=pointer]':
+        - /url: /coin/figure-heloc
+        - generic [ref=e112]:
+          - button "Add to favorites" [ref=e113]: ☆
+          - generic [ref=e114]:
+            - img "Figure Heloc" [ref=e115]
+            - generic [ref=e116]:
+              - heading "Figure Heloc" [level=2] [ref=e117]
+              - paragraph [ref=e118]: FIGR_HELOC
+          - paragraph [ref=e119]: "Price: $1.039"
+          - paragraph [ref=e120]: 0.00 %
+          - paragraph [ref=e121]: "Market Cap: 20,256,926,784"
+      - 'link "Add to favorites Hyperliquid Hyperliquid HYPE Price: $65.51 2.73 % Market Cap: 14,573,273,812" [ref=e122] [cursor=pointer]':
+        - /url: /coin/hyperliquid
+        - generic [ref=e123]:
+          - button "Add to favorites" [ref=e124]: ☆
+          - generic [ref=e125]:
+            - img "Hyperliquid" [ref=e126]
+            - generic [ref=e127]:
+              - heading "Hyperliquid" [level=2] [ref=e128]
+              - paragraph [ref=e129]: HYPE
+          - paragraph [ref=e130]: "Price: $65.51"
+          - paragraph [ref=e131]: 2.73 %
+          - paragraph [ref=e132]: "Market Cap: 14,573,273,812"

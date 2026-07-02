@@ -1,0 +1,41 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - link "Home" [ref=e4] [cursor=pointer]:
+      - /url: /
+    - link "About" [ref=e5] [cursor=pointer]:
+      - /url: /about
+  - generic [ref=e6]:
+    - heading "🚀 Crypto Dash" [level=1] [ref=e7]
+    - generic [ref=e11]:
+      - textbox "Filter coins by name or symbol" [ref=e13]
+      - generic [ref=e14]:
+        - generic [ref=e15]: "Show:"
+        - combobox "Show:" [ref=e16]:
+          - option "5"
+          - option "10" [selected]
+          - option "20"
+          - option "50"
+          - option "100"
+      - generic [ref=e17]:
+        - generic [ref=e18]: "Sort By:"
+        - combobox "Sort By:" [ref=e19]:
+          - option "Market Cap (High To Low)" [selected]
+          - option "Market Cap (Low To High)"
+          - option "Price (High To Low)"
+          - option "Price (Low To High)"
+          - option "24h Change (High To Low)"
+          - option "24h Change (Low To High)"
+      - button "★ Favorites (1)" [active] [pressed] [ref=e133] [cursor=pointer]
+    - main [ref=e22]:
+      - 'link "Remove from favorites Bitcoin Bitcoin BTC Price: $61,465 1.15 % Market Cap: 1,232,449,147,350" [ref=e134] [cursor=pointer]':
+        - /url: /coin/bitcoin
+        - generic [ref=e24]:
+          - button "Remove from favorites" [ref=e135]: ★
+          - generic [ref=e26]:
+            - img "Bitcoin" [ref=e27]
+            - generic [ref=e28]:
+              - heading "Bitcoin" [level=2] [ref=e29]
+              - paragraph [ref=e30]: BTC
+          - paragraph [ref=e31]: "Price: $61,465"
+          - paragraph [ref=e32]: 1.15 %
+          - paragraph [ref=e33]: "Market Cap: 1,232,449,147,350"
