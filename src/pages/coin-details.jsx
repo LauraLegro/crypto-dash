@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router';
 import Spinner from '../components/Spinner';
 import CoinChart from '../components/CoinChart';
+import { useFavorites } from '../hooks/useFavorites';
 const API_URL = import.meta.env.VITE_COIN_API_URL;
 
 const CoinDetailsPage = () => {
   const { id } = useParams();
+  const { isFavorite, toggleFavorite } = useFavorites();
   const [coin, setCoin] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -33,7 +35,14 @@ const CoinDetailsPage = () => {
       <Link to='/'>← Back To Home</Link>
 
       <h1 className='coin-details-title'>
-        {coin ? `${coin.name} (${coin.symbol.toUpperCase()})` : 'Coin Details'}
+        {coin ? `${coin.name} (${coin.symbol.toUpperCase()})` : 'Coin Details'}{' '}
+        <button
+          className={`star-btn ${isFavorite(id) ? 'starred' : ''}`}
+          aria-label={isFavorite(id) ? 'Remove from favorites' : 'Add to favorites'}
+          onClick={() => toggleFavorite(id)}
+        >
+          {isFavorite(id) ? '★' : '☆'}
+        </button>
       </h1>
 
       {loading && <Spinner />}

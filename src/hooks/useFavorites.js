@@ -5,7 +5,8 @@ const STORAGE_KEY = 'crypto-dash-favorites';
 export const useFavorites = () => {
   const [favorites, setFavorites] = useState(() => {
     try {
-      return JSON.parse(localStorage.getItem(STORAGE_KEY)) ?? [];
+      const stored = JSON.parse(localStorage.getItem(STORAGE_KEY));
+      return Array.isArray(stored) ? stored : [];
     } catch {
       return [];
     }
