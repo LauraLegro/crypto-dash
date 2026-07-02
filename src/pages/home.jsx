@@ -1,21 +1,23 @@
+import { useState } from 'react';
 import CoinCard from '../components/CoinCard';
 import LimitSelector from '../components/LimitSelector';
 import FilterInput from '../components/FilterInput';
 import SortSelector from '../components/SortSelector';
 import Spinner from '../components/Spinner';
+import FavoritesToggle from '../components/FavoritesToggle';
+import { useCoins } from '../hooks/useCoins';
+import { useFavorites } from '../hooks/useFavorites';
 
-const HomePage = ({
-  coins,
-  filter,
-  setFilter,
-  limit,
-  setLimit,
-  sortBy,
-  setSortBy,
-  loading,
-  error,
-}) => {
+const HomePage = () => {
+  const [limit, setLimit] = useState(10);
+  const [filter, setFilter] = useState('');
+  const [sortBy, setSortBy] = useState('market_cap_desc');
+  const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
+  const { coins, loading, error } = useCoins(limit);
+  const { favorites, isFavorite, toggleFavorite } = useFavorites();
+
   const filteredCoins = coins
+    .filter((coin) => !showFavoritesOnly || isFavorite(coin.id))
     .filter((coin) => {
       return (
         coin.name.toLowerCase().includes(filter.toLowerCase()) ||
@@ -50,12 +52,24 @@ const HomePage = ({
         <FilterInput filter={filter} onFilterChange={setFilter} />
         <LimitSelector limit={limit} onLimitChange={setLimit} />
         <SortSelector sortBy={sortBy} onSortChange={setSortBy} />
+        <FavoritesToggle
+          showFavoritesOnly={showFavoritesOnly}
+          onToggle={setShowFavoritesOnly}
+          count={favorites.length}
+        />
       </div>
 
       {!loading && !error && (
         <main className='grid'>
           {filteredCoins.length > 0 ? (
-            filteredCoins.map((coin) => <CoinCard key={coin.id} coin={coin} />)
+            filteredCoins.map((coin) => (
+              <CoinCard
+                key={coin.id}
+                coin={coin}
+                isFavorite={isFavorite(coin.id)}
+                onToggleFavorite={() => toggleFavorite(coin.id)}
+              />
+            ))
           ) : (
             <p>No matching coins</p>
           )}
